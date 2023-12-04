@@ -1,0 +1,26 @@
+﻿﻿@using Lab12.Models
+@model CalcModel
+
+
+
+<div style="margin-left: 50px">
+    <h1>@Model.calcName</h1>
+
+    <form method="post" asp-action="@Model.controllerMethod">
+        <input type="number" id="A" name="A" asp-for="A"><br><br>
+
+        <select id="operation" name="operation" asp-for="operation">
+            <option value="Add">+</option>
+            <option value="Subtract">-</option>
+            <option value="Multiply">*</option>
+            <option value="Divide">/</option>
+        </select><br><br>
+
+        <input type="number" id="B" name="B" asp-for="B"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    
+</div>
+
+
